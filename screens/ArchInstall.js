@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text, StyleSheet, Linking} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
-function privacy() {
+function archinstall({navigation}) {
   return (
     <View style={styles.container}>
       <View>
@@ -13,7 +13,7 @@ function privacy() {
             fontSize: 30,
             textAlign: 'center',
           }}>
-          Privacy
+          Arch Linux Install
         </Text>
       </View>
       <View
@@ -25,8 +25,16 @@ function privacy() {
         }}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Linking.openURL('https://github.com/nebulaxyz')}>
-          <Text style={styles.text}>Android Privacy Guide</Text>
+          onPress={() => navigation.navigate('ArchUEFI')}>
+          <Text style={styles.text}>Arch Linux UEFI Install</Text>
+          <Text style={styles.date}>Last updated: 02/09/2020</Text>
+        </TouchableOpacity>
+        <Text></Text>
+        <Text></Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('ArchLegacy')}>
+          <Text style={styles.text}>Arch Linux Legacy Install</Text>
           <Text style={styles.date}>Last updated: 02/09/2020</Text>
         </TouchableOpacity>
       </View>
@@ -34,7 +42,7 @@ function privacy() {
   );
 }
 
-export default privacy;
+export default archinstall;
 
 const styles = StyleSheet.create({
   container: {

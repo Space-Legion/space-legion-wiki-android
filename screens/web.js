@@ -1,10 +1,20 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-export default function web() {
+function web() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Coming Soon!</Text>
+      <View>
+        <Text
+          style={{
+            color: '#FD5901',
+            fontWeight: 'bold',
+            fontSize: 30,
+            textAlign: 'center',
+          }}>
+          Coming Soon!!
+        </Text>
+      </View>
     </View>
   );
 }
@@ -13,15 +23,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'black',
-    justifyContent: 'center',
     alignItems: 'center',
-  },
-
-  text: {
-    color: '#FD5901',
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
     justifyContent: 'center',
   },
 });
+
+export default web;

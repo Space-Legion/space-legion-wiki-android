@@ -1,28 +1,31 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import HomeScreen from './screens/HomeScreen';
-import GNULinux from './screens/gnuLinux';
-import archInstall from './components/archGuides/ArchInstall';
-import archUEFI from './components/archGuides/archUEFI';
-import dwminstall from './components/dwmInstall';
-import virtualBoxInstall from './components/VirtualBoxArch';
-import ventoy from './components/VentoyGuide';
-import Android from './screens/Android';
-import aospbuild from './components/AOSP build guide/aospbuildguide';
-import compileROM from './components/AOSP build guide/compileROM';
-import miscellaneous from './screens/miscellaneous';
-import gitcheatsheet from './components/GitCheatSheet';
-import privacy from './screens/privacy';
-import web from './screens/web';
-import Servers from './screens/Servers';
-import archLegacy from './components/archGuides/archLegacy';
-import about from './screens/about';
+import HomeScreen from './screens/Home';
+import gnulinux from './screens/gnulinux';
+import android from './screens/android';
+import web from './screens/Web';
+import privacy from './screens/Privacy';
+import server from './screens/Servers';
+import other from './screens/Other';
+import about from './screens/About';
+import archinstall from './screens/ArchInstall';
+import archuefi from './screens/components/archUEFI';
+import archlegacy from './screens/components/archLegacy';
+import dwminstall from './screens/components/dwmInstall';
+import archvbox from './screens/components/ArchVbox';
+import aosp from './screens/AOSP';
+import romcompile from './screens/components/romcompile';
+import kernelupdate from './screens/components/kernelupdate';
+import linuxbasics from './screens/components/linuxbasics';
+import oracledb from './screens/components/oracleDb';
+import etcher from './screens/components/etcherDroid';
+import gitcheatsheet from './screens/components/gitcheat';
 
 const Stack = createStackNavigator();
 
-export default function spacelegion() {
+function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -31,26 +34,28 @@ export default function spacelegion() {
           headerShown: false,
         }}>
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="GnuLinux" component={GNULinux} />
-        <Stack.Screen name="ArchInstall" component={archInstall} />
-        <Stack.Screen name="Archuefi" component={archUEFI} />
-        <Stack.Screen name="DWMInstall" component={dwminstall} />
-        <Stack.Screen name="Android" component={Android} />
-        <Stack.Screen
-          name="ArchVirtualBoxInstall"
-          component={virtualBoxInstall}
-        />
-        <Stack.Screen name="ventoyguide" component={ventoy} />
-        <Stack.Screen name="aospbuildguide" component={aospbuild} />
-        <Stack.Screen name="compileROM" component={compileROM} />
-        <Stack.Screen name="miscellaneous" component={miscellaneous} />
-        <Stack.Screen name="gitcheatsheet" component={gitcheatsheet} />
-        <Stack.Screen name="privacy" component={privacy} />
-        <Stack.Screen name="web" component={web} />
-        <Stack.Screen name="Servers" component={Servers} />
-        <Stack.Screen name="archlegacy" component={archLegacy} />
+        <Stack.Screen name="Gnulinux" component={gnulinux} />
+        <Stack.Screen name="Android" component={android} />
+        <Stack.Screen name="Web" component={web} />
+        <Stack.Screen name="Privacy" component={privacy} />
+        <Stack.Screen name="Server" component={server} />
+        <Stack.Screen name="Other" component={other} />
         <Stack.Screen name="About" component={about} />
+        <Stack.Screen name="ArchInstall" component={archinstall} />
+        <Stack.Screen name="ArchUEFI" component={archuefi} />
+        <Stack.Screen name="ArchLegacy" component={archlegacy} />
+        <Stack.Screen name="DWMInstall" component={dwminstall} />
+        <Stack.Screen name="ArchVbox" component={archvbox} />
+        <Stack.Screen name="AOSP" component={aosp} />
+        <Stack.Screen name="RomCompile" component={romcompile} />
+        <Stack.Screen name="KernelUpdate" component={kernelupdate} />
+        <Stack.Screen name="LinuxBasics" component={linuxbasics} />
+        <Stack.Screen name="OracleDB" component={oracledb} />
+        <Stack.Screen name="EtcherDroid" component={etcher} />
+        <Stack.Screen name="GitCheat" component={gitcheatsheet} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
+export default App;

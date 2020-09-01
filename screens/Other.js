@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, Linking} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
-function privacy() {
+function other({navigation}) {
   return (
     <View style={styles.container}>
       <View>
@@ -25,8 +25,8 @@ function privacy() {
         }}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Linking.openURL('https://github.com/nebulaxyz')}>
-          <Text style={styles.text}>Android Privacy Guide</Text>
+          onPress={() => navigation.navigate('GitCheat')}>
+          <Text style={styles.text}>Git CheatSheet</Text>
           <Text style={styles.date}>Last updated: 02/09/2020</Text>
         </TouchableOpacity>
       </View>
@@ -34,7 +34,7 @@ function privacy() {
   );
 }
 
-export default privacy;
+export default other;
 
 const styles = StyleSheet.create({
   container: {

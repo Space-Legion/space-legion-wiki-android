@@ -2,56 +2,55 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
-export default function GNULinux({navigation}) {
+function gnulinux({navigation}) {
   return (
     <View style={styles.container}>
-      <Text></Text>
-      <Text
+      <View>
+        <Text
+          style={{
+            color: '#FD5901',
+            fontWeight: 'bold',
+            fontSize: 30,
+            textAlign: 'center',
+          }}>
+          Gnu/Linux
+        </Text>
+      </View>
+      <View
         style={{
-          color: '#FD5901',
-          fontWeight: 'bold',
-          fontSize: 30,
-          textAlign: 'center',
-          fontFamily: 'monospace',
-          fontWeight: 'bold',
+          top: 25,
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}>
-        GNU/Linux
-      </Text>
-      <Text></Text>
-      <Text></Text>
-      <TouchableOpacity
-        style={styles.archButton}
-        onPress={() => navigation.navigate('ArchInstall')}>
-        <Text style={styles.archButtonText}>Arch Linux Installation Guide</Text>
-        <Text style={styles.updateButton}>Last Updated: 22/08/2020</Text>
-      </TouchableOpacity>
-      <Text></Text>
-      <Text></Text>
-      <TouchableOpacity
-        style={styles.archButton}
-        onPress={() => navigation.navigate('DWMInstall')}>
-        <Text style={styles.archButtonText}>DWM Installation Guide</Text>
-        <Text style={styles.updateButton}>Last Updated: 22/08/2020</Text>
-      </TouchableOpacity>
-      <Text></Text>
-      <Text></Text>
-      <TouchableOpacity
-        style={styles.archButton}
-        onPress={() => navigation.navigate('ArchVirtualBoxInstall')}>
-        <Text style={styles.archButtonText}>Install VirtualBox in Arch</Text>
-        <Text style={styles.updateButton}>Last Updated: 22/08/2020</Text>
-      </TouchableOpacity>
-      <Text></Text>
-      <Text></Text>
-      <TouchableOpacity
-        style={styles.archButton}
-        onPress={() => navigation.navigate('ventoyguide')}>
-        <Text style={styles.archButtonText}>Ventoy Guide</Text>
-        <Text style={styles.updateButton}>Last Updated: 22/08/2020</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('ArchInstall')}>
+          <Text style={styles.text}>Arch Linux Installation Guide</Text>
+          <Text style={styles.date}>Last updated: 02/09/2020</Text>
+        </TouchableOpacity>
+        <Text></Text>
+        <Text></Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('DWMInstall')}>
+          <Text style={styles.text}>DWN Installation Guide</Text>
+          <Text style={styles.date}>Last updated: 02/09/2020</Text>
+        </TouchableOpacity>
+        <Text></Text>
+        <Text></Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('ArchVbox')}>
+          <Text style={styles.text}>Install VirtualBox in Arch</Text>
+          <Text style={styles.date}>Last updated: 02/09/2020</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
+
+export default gnulinux;
 
 const styles = StyleSheet.create({
   container: {
@@ -59,28 +58,26 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
 
-  archButton: {
+  button: {
     backgroundColor: 'black',
-    width: 350,
-    height: 70,
-    marginHorizontal: 20,
-    borderRadius: 10,
-    borderColor: '#3E3E3D',
+    borderRadius: 8,
     borderWidth: 5,
+    borderColor: '#2C2B2B',
+    width: 300,
+    height: 60,
   },
 
-  archButtonText: {
-    color: '#00FF00',
+  text: {
+    top: 8,
     textAlign: 'center',
+    color: '#43F701',
+    fontWeight: 'bold',
     fontSize: 18,
-    top: 14,
-    fontFamily: 'monospace',
-    fontWeight: 'bold',
   },
-  updateButton: {
+
+  date: {
+    textAlign: 'right',
+    top: 7,
     color: '#FD5901',
-    fontWeight: 'bold',
-    top: 17,
-    marginLeft: 170,
   },
 });
