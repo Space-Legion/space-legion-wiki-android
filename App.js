@@ -22,6 +22,7 @@ import linuxbasics from './screens/components/linuxbasics';
 import oracledb from './screens/components/oracleDb';
 import etcher from './screens/components/etcherDroid';
 import gitcheatsheet from './screens/components/gitcheat';
+import ventoy from './screens/components/ventoy';
 
 const Stack = createStackNavigator();
 
@@ -53,6 +54,7 @@ function App() {
         <Stack.Screen name="OracleDB" component={oracledb} />
         <Stack.Screen name="EtcherDroid" component={etcher} />
         <Stack.Screen name="GitCheat" component={gitcheatsheet} />
+        <Stack.Screen name="Ventoy" component={ventoy} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -45,6 +45,14 @@ function gnulinux({navigation}) {
           <Text style={styles.text}>Install VirtualBox in Arch</Text>
           <Text style={styles.date}>Last updated: 02/09/2020</Text>
         </TouchableOpacity>
+        <Text></Text>
+        <Text></Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Ventoy')}>
+          <Text style={styles.text}>Ventoy Setup Guide</Text>
+          <Text style={styles.date}>Last updated: 02/09/2020</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

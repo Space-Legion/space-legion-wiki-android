@@ -146,7 +146,7 @@ export default function gitcheatsheet() {
         <Text style={styles.guide}>git clone (url)</Text>
         <Text></Text>
         <Text
-          style={{color: 'green', fontSize: 22, fontFamily: 'monospace'}}
+          style={{color: '#44F803', fontSize: 22, fontFamily: 'monospace'}}
           onPress={() => Linking.openURL('https://github.com/sarosx')}>
           By SarosX
         </Text>

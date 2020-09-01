@@ -25,7 +25,11 @@ function privacy() {
         }}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Linking.openURL('https://github.com/nebulaxyz')}>
+          onPress={() =>
+            Linking.openURL(
+              'https://github.com/nebulaxyz/android-privacy-guide-2020',
+            )
+          }>
           <Text style={styles.text}>Android Privacy Guide</Text>
           <Text style={styles.date}>Last updated: 02/09/2020</Text>
         </TouchableOpacity>
