@@ -12,6 +12,7 @@ function archinstall({navigation}) {
             fontWeight: 'bold',
             fontSize: 30,
             textAlign: 'center',
+            fontFamily: 'monospace',
           }}>
           Arch Linux Install
         </Text>
@@ -65,11 +66,13 @@ const styles = StyleSheet.create({
     color: '#43F701',
     fontWeight: 'bold',
     fontSize: 18,
+    fontFamily: 'monospace',
   },
 
   date: {
     textAlign: 'right',
     top: 7,
     color: '#FD5901',
+    fontFamily: 'monospace',
   },
 });

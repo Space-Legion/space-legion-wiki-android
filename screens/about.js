@@ -25,7 +25,7 @@ export default function about({navigation}) {
           fontWeight: 'bold',
           fontSize: 16,
         }}>
-        Alpha v2.9.1 release
+        Alpha v3.1.0 release
       </Text>
       <Text></Text>
       <Text></Text>
@@ -46,7 +46,7 @@ export default function about({navigation}) {
       <Text></Text>
       <Text></Text>
       <Text style={styles.text}>Lead Devoloper</Text>
-      <Text style={{color: 'white'}}>=================</Text>
+      <Text style={{color: 'white', left: 10}}>=================</Text>
       <Text
         style={styles.name}
         onPress={() => Linking.openURL('https://github.com/sarosx')}>
@@ -54,7 +54,9 @@ export default function about({navigation}) {
       </Text>
       <Text></Text>
       <Text style={styles.text}>Lead Designer, Maintainer</Text>
-      <Text style={{color: 'white'}}>===============================</Text>
+      <Text style={{color: 'white', left: 10}}>
+        ===============================
+      </Text>
       <Text
         style={styles.name2}
         onPress={() => Linking.openURL('https://github.com/nebulaxyz')}>
@@ -62,6 +64,19 @@ export default function about({navigation}) {
       </Text>
       <Text></Text>
       <Text></Text>
+      <Text style={styles.text}>Visit out Official webpage</Text>
+      <Text style={{color: 'white'}}>==================================</Text>
+      <Text
+        style={{
+          left: 10,
+          color: 'purple',
+          fontFamily: 'monospace',
+          fontWeight: 'bold',
+          fontSize: 16,
+        }}
+        onPress={() => Linking.openURL('https://space-legion.github.io/')}>
+        space-legion.github.io
+      </Text>
       <Text></Text>
       <Text
         style={styles.git}
@@ -83,6 +98,7 @@ const styles = StyleSheet.create({
   },
 
   text: {
+    left: 10,
     color: 'white',
     fontFamily: 'monospace',
     fontWeight: 'bold',
@@ -94,6 +110,7 @@ const styles = StyleSheet.create({
     fontFamily: 'monospace',
     fontWeight: 'bold',
     fontSize: 16,
+    left: 10,
   },
 
   name2: {
@@ -101,9 +118,11 @@ const styles = StyleSheet.create({
     fontFamily: 'monospace',
     fontWeight: 'bold',
     fontSize: 16,
+    left: 10,
   },
 
   git: {
+    left: 10,
     color: 'red',
     fontFamily: 'monospace',
     fontWeight: 'bold',

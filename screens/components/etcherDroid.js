@@ -1,31 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import WebView from 'react-native-webview';
 
 function etcher() {
   return (
-    <View style={styles.container}>
-      <View>
-        <Text
-          style={{
-            color: '#FD5901',
-            fontWeight: 'bold',
-            fontSize: 30,
-            textAlign: 'center',
-          }}>
-          Coming Soon!!
-        </Text>
-      </View>
-    </View>
+    <WebView
+      source={{uri: 'https://f-droid.org/packages/eu.depau.etchdroid/'}}
+    />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default etcher;

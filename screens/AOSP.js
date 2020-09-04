@@ -13,8 +13,9 @@ function aosp({navigation}) {
             fontWeight: 'bold',
             fontSize: 30,
             textAlign: 'center',
+            fontFamily: 'monospace',
           }}>
-          Android
+          AOSP Build Guide
         </Text>
       </View>
       <View
@@ -82,11 +83,13 @@ const styles = StyleSheet.create({
     color: '#43F701',
     fontWeight: 'bold',
     fontSize: 18,
+    fontFamily: 'monospace',
   },
 
   date: {
     textAlign: 'right',
     top: 7,
     color: '#FD5901',
+    fontFamily: 'monospace',
   },
 });

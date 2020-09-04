@@ -12,6 +12,7 @@ function gnulinux({navigation}) {
             fontWeight: 'bold',
             fontSize: 30,
             textAlign: 'center',
+            fontFamily: 'monospace',
           }}>
           Gnu/Linux
         </Text>
@@ -53,6 +54,14 @@ function gnulinux({navigation}) {
           <Text style={styles.text}>Ventoy Setup Guide</Text>
           <Text style={styles.date}>Last updated: 02/09/2020</Text>
         </TouchableOpacity>
+        <Text></Text>
+        <Text></Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('BSPWM')}>
+          <Text style={styles.text}>BSPWM Installation Guide</Text>
+          <Text style={styles.date}>Last updated: 02/09/2020</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -80,12 +89,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#43F701',
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 16,
+    fontFamily: 'monospace',
   },
 
   date: {
     textAlign: 'right',
     top: 7,
     color: '#FD5901',
+    fontFamily: 'monospace',
   },
 });

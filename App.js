@@ -23,6 +23,9 @@ import oracledb from './screens/components/oracleDb';
 import etcher from './screens/components/etcherDroid';
 import gitcheatsheet from './screens/components/gitcheat';
 import ventoy from './screens/components/ventoy';
+import bspwm from './screens/components/bspwm';
+import androidprivacy from './screens/components/androidprivacy';
+import vim from './screens/components/vim'
 
 const Stack = createStackNavigator();
 
@@ -55,6 +58,9 @@ function App() {
         <Stack.Screen name="EtcherDroid" component={etcher} />
         <Stack.Screen name="GitCheat" component={gitcheatsheet} />
         <Stack.Screen name="Ventoy" component={ventoy} />
+        <Stack.Screen name="BSPWM" component={bspwm} />
+        <Stack.Screen name="androidprivacy" component={androidprivacy} />
+        <Stack.Screen name="Vim" component={vim} />
       </Stack.Navigator>
     </NavigationContainer>
   );

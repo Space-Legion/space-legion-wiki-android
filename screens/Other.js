@@ -12,8 +12,9 @@ function other({navigation}) {
             fontWeight: 'bold',
             fontSize: 30,
             textAlign: 'center',
+            fontFamily: 'monospace',
           }}>
-          Privacy
+          Other
         </Text>
       </View>
       <View
@@ -27,6 +28,15 @@ function other({navigation}) {
           style={styles.button}
           onPress={() => navigation.navigate('GitCheat')}>
           <Text style={styles.text}>Git CheatSheet</Text>
+          <Text style={styles.date}>Last updated: 02/09/2020</Text>
+        </TouchableOpacity>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Vim')}>
+          <Text style={styles.text}>Vim Text Editor Guide</Text>
           <Text style={styles.date}>Last updated: 02/09/2020</Text>
         </TouchableOpacity>
       </View>
@@ -57,11 +67,13 @@ const styles = StyleSheet.create({
     color: '#43F701',
     fontWeight: 'bold',
     fontSize: 18,
+    fontFamily: 'monospace',
   },
 
   date: {
     textAlign: 'right',
     top: 7,
     color: '#FD5901',
+    fontFamily: 'monospace',
   },
 });

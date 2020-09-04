@@ -1,10 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, StatusBar} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 export default function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor="black" barStyle="dark-content" />
       <View style={{alignItems: 'center', justifyContent: 'center'}}>
         <Text
           style={{
@@ -17,11 +18,12 @@ export default function HomeScreen({navigation}) {
         </Text>
         <TouchableOpacity
           style={{
-            top: 20,
+            top: 25,
             backgroundColor: '#2C2B2B',
             width: 250,
             height: 30,
             alignItems: 'center',
+            borderRadius: 5,
           }}>
           <Text
             style={{
@@ -34,24 +36,25 @@ export default function HomeScreen({navigation}) {
           </Text>
         </TouchableOpacity>
         <Text
-          style={{top: 30, color: '#FD5901', fontWeight: 'bold', fontSize: 25}}>
+          style={{top: 35, color: '#FD5901', fontWeight: 'bold', fontSize: 25}}>
           Our Guides
         </Text>
       </View>
-      <View style={{top: 50, alignItems: 'center', justifyContent: 'center'}}>
+      <View style={{top: 55, alignItems: 'center', justifyContent: 'center'}}>
         <TouchableOpacity
           style={{
             backgroundColor: '#2C2B2B',
             width: 250,
             height: 30,
             alignItems: 'center',
+            borderRadius: 5,
           }}>
           <Text style={{color: 'white', fontWeight: 'bold', top: 5}}>
             Last Updated: 2/09/2020
           </Text>
         </TouchableOpacity>
       </View>
-      <View style={{top: 110}}>
+      <View style={{top: 115}}>
         <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
           <TouchableOpacity
             style={styles.button}
@@ -66,7 +69,7 @@ export default function HomeScreen({navigation}) {
         </View>
         <View
           style={{
-            top: 35,
+            top: 40,
             flexDirection: 'row',
             justifyContent: 'space-around',
           }}>
@@ -83,7 +86,7 @@ export default function HomeScreen({navigation}) {
         </View>
         <View
           style={{
-            top: 70,
+            top: 80,
             flexDirection: 'row',
             justifyContent: 'space-around',
           }}>
@@ -99,7 +102,7 @@ export default function HomeScreen({navigation}) {
           </TouchableOpacity>
         </View>
         <View
-          style={{top: 120, alignItems: 'center', justifyContent: 'center'}}>
+          style={{top: 125, alignItems: 'center', justifyContent: 'center'}}>
           <TouchableOpacity
             style={styles.button}
             onPress={() => navigation.navigate('About')}>
@@ -127,7 +130,7 @@ const styles = StyleSheet.create({
   text: {
     top: 12,
     color: '#FD5901',
-    fontSize: 16,
+    fontSize: 17,
     textAlign: 'center',
     fontWeight: 'bold',
   },
